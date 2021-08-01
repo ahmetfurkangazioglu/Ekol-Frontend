@@ -37,7 +37,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
 }
 
@@ -61,3 +61,80 @@ html, body{
     font-family: "Times New Roman", Times, serif;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  body {
+    background-color: #57482e;
+    margin:0;
+ }
+ 
+ .patterns {
+   height: 100vh;
+ }
+ 
+ 
+ 
+ svg text {
+   font-family: Lora;
+   letter-spacing: 10px;
+   stroke: #e4aa45;
+   font-size: 45px;
+   font-weight: 500;
+   stroke-width: 3;
+  
+   animation: textAnimate 5s infinite alternate;
+   
+ }
+ 
+ @keyframes textAnimate {
+   0% {
+     stroke-dasharray: 0 50%;
+     stroke-dashoffset:  20%;
+     fill:hsl(189, 68%, 75%)
+ 
+   }
+   
+   100% {
+     stroke-dasharray: 50% 0;
+     stroke-dashoffstet: -20%;
+     fill: rgba(210, 150, 46, 0)
+   }
+   
+ }
+ 
+ 
+ 
