@@ -43,7 +43,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    background: url('https://images.pexels.com/photos/3184359/pexels-photo-3184359.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') black no-repeat center center scroll;
   }
   header video {
     display: none;
@@ -94,7 +94,7 @@ html, body{
 
 
 
-
+  @media (min-width:800px) {
   
 
   body {
@@ -103,7 +103,7 @@ html, body{
  }
  
  .patterns {
-   height: 100vh;
+   height: 100%;
  }
  
  
@@ -112,7 +112,7 @@ html, body{
    font-family: Lora;
    letter-spacing: 10px;
    stroke: #e4aa45;
-   font-size: 45px;
+   font-size: 220%;
    font-weight: 500;
    stroke-width: 3;
   
@@ -137,4 +137,62 @@ html, body{
  }
  
  
+}
+
+
+
+
+
+
+
+
+
+
  
+@media (max-width:800px) {
+  
+
+  body {
+    background-color: #57482e;
+    margin:0;
+ }
+ 
+ .patterns {
+   height: 100%;
+ }
+ 
+ 
+ 
+ svg text {
+   font-family: Lora;
+   letter-spacing: 10%;;
+   stroke: #e4aa45;
+   font-size: 140%;
+   font-weight: 500;
+   stroke-width: 3;
+  
+   animation: textAnimate 5s infinite alternate;
+   
+ }
+ 
+ @keyframes textAnimate {
+   0% {
+     stroke-dasharray: 0 50%;
+     stroke-dashoffset:  20%;
+     fill:hsl(189, 68%, 75%)
+ 
+   }
+   
+   100% {
+     stroke-dasharray: 50% 0;
+     stroke-dashoffstet: -20%;
+     fill: rgba(210, 150, 46, 0)
+   }
+   
+ }
+ 
+ 
+}
+
+
+

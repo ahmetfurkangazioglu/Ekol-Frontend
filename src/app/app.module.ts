@@ -14,6 +14,7 @@ import { SocialMedia2Component } from './component/social-media2/social-media2.c
 import { AboutComponent } from './component/about/about.component';
 import { ReferansComponent } from './component/referans/referans.component';
 import { FootersComponent } from './component/footers/footers.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FootersComponent } from './component/footers/footers.component';
     AboutComponent,
     ReferansComponent,
     FootersComponent,
+    ContactComponent,
 
   ],
   imports: [
