@@ -21,9 +21,24 @@ export class ReferansComponent implements OnInit {
     $owl.owlCarousel({
       center: true,
       loop: true,
-      items: 3,
+      margin:10,
+      autoplay:true,
+      autoplayTimeout:2000,
+      responsiveClass:true,
+      autoplayHoverPause:true,
+      responsive:{
+        0:{
+          items:1
+        },
+        600:{
+          items:3
+        },
+        1000:{
+          items:5
+        }
+
+      }
     });
-    
     $(document).on('click', '.owl-item>div', function() {
       // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
       var $speed = 300;  // in ms

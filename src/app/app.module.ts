@@ -15,6 +15,7 @@ import { AboutComponent } from './component/about/about.component';
 import { ReferansComponent } from './component/referans/referans.component';
 import { FootersComponent } from './component/footers/footers.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { MeatsysComponent } from './component/meatsys/meatsys.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ContactComponent } from './component/contact/contact.component';
     ReferansComponent,
     FootersComponent,
     ContactComponent,
+    MeatsysComponent,
 
   ],
   imports: [

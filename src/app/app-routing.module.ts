@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './component/contact/contact.component';
 
 import { HomePageComponent } from './component/home-page/home-page.component';
+import { MeatsysComponent } from './component/meatsys/meatsys.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:HomePageComponent},
   {path:"home",component:HomePageComponent},
   {path:"contact",component:ContactComponent},
+  {path:"meatsys",component:MeatsysComponent},
 ];
 
 @NgModule({

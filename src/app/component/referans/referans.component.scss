@@ -1,6 +1,4 @@
-
-
-  $desktop: 1024px;
+$desktop: 1024px;
 
 @mixin breakpoint($point) {
   @if $point == desktop {
@@ -25,8 +23,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	background-color: #e6e6e6;
 }
 
@@ -35,12 +33,13 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
-	margin: 20px 10 100px;
+	margin: auto;
 }
 
 .card {
-	width: 280px;
-	margin: 65px;
+	width: auto;
+	height: auto;
+	margin: 10px;
 	background-color: white;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 
@@ -195,4 +194,3 @@ html, body{
 	text-decoration: none;
 	padding: 10px;
   }
-  
