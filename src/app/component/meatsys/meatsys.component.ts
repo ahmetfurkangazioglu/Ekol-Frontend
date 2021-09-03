@@ -10,12 +10,7 @@ export class MeatsysComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $(window).scroll(function(scroll:any) {
-      scroll = $(window).scrollTop();
-     $("#js-hero img").css({
-       width: (100 + scroll/5) + "%"
-     })
-   })
+  
   }
 
 }
