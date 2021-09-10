@@ -16,6 +16,8 @@ import { ReferansComponent } from './component/referans/referans.component';
 import { FootersComponent } from './component/footers/footers.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { MeatsysComponent } from './component/meatsys/meatsys.component';
+import { SentezComponent } from './component/sentez/sentez.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { MeatsysComponent } from './component/meatsys/meatsys.component';
     FootersComponent,
     ContactComponent,
     MeatsysComponent,
+    SentezComponent,
 
   ],
   imports: [

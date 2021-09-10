@@ -5,12 +5,14 @@ import { ContactComponent } from './component/contact/contact.component';
 
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { MeatsysComponent } from './component/meatsys/meatsys.component';
+import { SentezComponent } from './component/sentez/sentez.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:HomePageComponent},
   {path:"home",component:HomePageComponent},
   {path:"contact",component:ContactComponent},
   {path:"meatsys",component:MeatsysComponent},
+  {path:"sentez",component:SentezComponent},
 ];
 
 @NgModule({
