@@ -17,6 +17,7 @@ import { FootersComponent } from './component/footers/footers.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { MeatsysComponent } from './component/meatsys/meatsys.component';
 import { SentezComponent } from './component/sentez/sentez.component';
+import { ButtonComponent } from './component/button/button.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { SentezComponent } from './component/sentez/sentez.component';
     ContactComponent,
     MeatsysComponent,
     SentezComponent,
+    ButtonComponent,
 
   ],
   imports: [
