@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
+import * as jQuery from 'jquery';
 
 @Component({
   selector: 'app-home-page',
@@ -11,184 +12,86 @@ export class HomePageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
- this.deneme()
+ this.deneme();
   }
 
   deneme() {
-    var curpage = 1;
-    var sliding = false;
-    var click = true;
-    var left = document.getElementById("left");
-    var right = document.getElementById("right");
-    var pagePrefix = "slide";
-    var pageShift = 500;
-    var transitionPrefix = "circle";
-    var svg = true;
-    
-    function leftSlide() {
-      var k;
-      if (click) {
-        if (curpage == 1) curpage = 5;
-        console.log("woek");
-        sliding = true;
-        curpage--;
-        svg = true;
-        click = false;
-        for (k = 1; k <= 4; k++) {
-          var a1 = document.getElementById(pagePrefix + k);
-          if(a1!=null){
-            a1.className += " tran";
-          }
-         
-        }
-        setTimeout(() => {
-          move();
-        }, 200);
-        setTimeout(() => {
-          for (k = 1; k <= 4; k++) {
-            var a1 = document.getElementById(pagePrefix + k);
-            if(a1!=null){
-              a1.classList.remove("tran");
-            }
-            
-          }
-        }, 1400);
+    (function($) { "use strict";
+		
+	//Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+      var t:any
+      var e:any
+      var i:any
+    t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t: any) {
+      if (e!=null&&i!=null) {
+        e.classList.add("hover"), i.classList.add("hover")
       }
+        
     }
-    
-    function rightSlide() {
-      var k;
-      if (click) {
-        if (curpage == 4) curpage = 0;
-        console.log("woek");
-        sliding = true;
-        curpage++;
-        svg = false;
-        click = false;
-        for (k = 1; k <= 4; k++) {
-          var a1 = document.getElementById(pagePrefix + k);
-          if(a1!=null){
-            a1.className += " tran";
-          }
-         
-        }
-        setTimeout(() => {
-          move();
-        }, 200);
-        setTimeout(() => {
-          for (k = 1; k <= 4; k++) {
-            var a1 = document.getElementById(pagePrefix + k);
-            if(a1!=null){
-              a1.classList.remove("tran");
-            }
-            
-          }
-        }, 1400);
+    function s(t:any) {
+
+      if (e!=null&&i!=null) {
+        e.classList.remove("hover"), i.classList.remove("hover")
       }
+       
     }
-    
-    function move() {
-      var j;
-      var i;
-      if (sliding) {
-        sliding = false;
-        if (svg) {
-          for (j = 1; j <= 9; j++) {
-            var c = document.getElementById(transitionPrefix + j);
-            if(c!=null){
-              c.classList.remove("steap");
-              c.setAttribute("class", transitionPrefix + j + " streak");
-            }
-     
-            console.log("streak");
-          }
-        } else {
-          for (j = 10; j <= 18; j++) {
-            var c = document.getElementById(transitionPrefix + j);
-            if(c!=null){
-              c.classList.remove("steap");
-              c.setAttribute("class", transitionPrefix + j + " streak");
-            }
-          
-            console.log("streak");
-          }
-        }
-        setTimeout(() => {
-          for (i = 1; i <= 4; i++) {
-            if (i == curpage) {
-              var a = document.getElementById(pagePrefix + i);
-              if(a!=null){
-                a.className += " up1";
-              }
-              
-            } else {
-              var b = document.getElementById(pagePrefix + i);
-              if(b !=null){
-                b.classList.remove("up1");
-              }
-             
-            }
-          }
-          sliding = true;
-        }, 600);
-        setTimeout(() => {
-          click = true;
-        }, 1700);
-    
-        setTimeout(() => {
-          if (svg) {
-            for (j = 1; j <= 9; j++) {
-              var c = document.getElementById(transitionPrefix + j);
-              if(c!=null){
-                c.classList.remove("streak");
-                c.setAttribute("class", transitionPrefix + j + " steap");
-              }
-             
-            }
-          } else {
-            for (j = 10; j <= 18; j++) {
-              var c = document.getElementById(transitionPrefix + j);
-              if(c!=null){
-                c.classList.remove("streak");
-              c.setAttribute("class", transitionPrefix + j + " steap");
-              }
-           
-            }
-            sliding = true;
-          }
-        }, 850);
-        setTimeout(() => {
-          click = true;
-        }, 1700);
-      }
+    s(t);
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
     }
-    if(left!=null){
-      left.onmousedown = () => {
-        leftSlide();
-      };
-      
+    function o(t: Element) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
     }
- 
-    if(right!=null){
-      right.onmousedown = () => {
-        rightSlide();
-      };
-    }
- 
+	
+	$(document).ready(function() {
+		
+		/* Hero Case study images */			
+		
+		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(1)').addClass("show");
+			$('.case-study-name:nth-child(1)').addClass('active');
+		})
+		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(2)').addClass("show");
+			$('.case-study-name:nth-child(2)').addClass('active');
+		})
+		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(3)').addClass("show");
+			$('.case-study-name:nth-child(3)').addClass('active');
+		})
+		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(4)').addClass("show");
+			$('.case-study-name:nth-child(4)').addClass('active');
+		})
+		$('.case-study-name:nth-child(1)').trigger('mouseenter')
+					
+	});
+
     
-    document.onkeydown = e => {
-      if (e.keyCode == 37) {
-        leftSlide();
-      } else if (e.keyCode == 39) {
-        rightSlide();
-      }
-    };
-    
-    //for codepen header
-    // setTimeout(() => {
-    // 	rightSlide();
-    // }, 500);
-    
-    
+	
+	
+  })(jQuery); 
+
   }
 }
+
