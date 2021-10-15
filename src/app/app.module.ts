@@ -18,6 +18,11 @@ import { ContactComponent } from './component/contact/contact.component';
 import { MeatsysComponent } from './component/meatsys/meatsys.component';
 import { SentezComponent } from './component/sentez/sentez.component';
 import { ButtonComponent } from './component/button/button.component';
+import { HomePage2Component } from './component/home-page2/home-page2.component';
+import { Navbar2Component } from './component/navbar2/navbar2.component';
+import { Card2Component } from './component/card2/card2.component';
+import { ListComponent } from './component/list/list.component';
+import { Contact2Component } from './component/contact2/contact2.component';
 
 
 @NgModule({
@@ -36,6 +41,11 @@ import { ButtonComponent } from './component/button/button.component';
     MeatsysComponent,
     SentezComponent,
     ButtonComponent,
+    HomePage2Component,
+    Navbar2Component,
+    Card2Component,
+    ListComponent,
+    Contact2Component,
 
   ],
   imports: [
